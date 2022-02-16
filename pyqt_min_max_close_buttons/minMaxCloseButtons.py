@@ -17,7 +17,6 @@ class MinMaxCloseButtonsWidget(QWidget):
     def __initUi(self, hint):
         lay = QHBoxLayout()
         lay.setContentsMargins(0, 0, 0, 0)
-        lay.setSpacing(2)
 
         if hint == Qt.WindowMinMaxButtonsHint | Qt.WindowCloseButtonHint:
             lay.addWidget(self._minimizeBtn)
