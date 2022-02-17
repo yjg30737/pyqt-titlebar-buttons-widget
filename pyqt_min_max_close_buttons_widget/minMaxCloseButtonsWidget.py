@@ -1,5 +1,5 @@
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QWidget, QHBoxLayout, QPushButton
+from PyQt5.QtWidgets import QWidget, QHBoxLayout, QToolButton
 
 
 class MinMaxCloseButtonsWidget(QWidget):
@@ -9,9 +9,9 @@ class MinMaxCloseButtonsWidget(QWidget):
         self.__initUi(hint)
 
     def __initVal(self):
-        self._closeBtn = QPushButton()
-        self._minimizeBtn = QPushButton()
-        self._maximizeBtn = QPushButton()
+        self._closeBtn = QToolButton()
+        self._minimizeBtn = QToolButton()
+        self._maximizeBtn = QToolButton()
 
     def __initUi(self, hint):
         lay = QHBoxLayout()
