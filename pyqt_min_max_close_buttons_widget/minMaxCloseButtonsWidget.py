@@ -31,6 +31,7 @@ class MinMaxCloseButtonsWidget(QWidget):
             pass
 
         self.setLayout(lay)
+        # raise - helps the button widget not to be blocked by something else
         self.raise_()
 
     def getMinimizedBtn(self):
