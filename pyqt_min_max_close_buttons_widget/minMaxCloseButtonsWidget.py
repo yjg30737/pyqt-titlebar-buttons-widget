@@ -31,6 +31,7 @@ class MinMaxCloseButtonsWidget(QWidget):
             pass
 
         self.setLayout(lay)
+        self.raise_()
 
     def getMinimizedBtn(self):
         return self._minimizeBtn
