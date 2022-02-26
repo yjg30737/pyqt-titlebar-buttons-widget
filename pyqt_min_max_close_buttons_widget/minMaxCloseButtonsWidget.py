@@ -30,6 +30,10 @@ class MinMaxCloseButtonsWidget(QWidget):
             # todo for another type of flags
             pass
 
+        self._minimizeBtn.setFlat(True)
+        self._maximizeBtn.setFlat(True)
+        self._closeBtn.setFlat(True)
+
         self.setLayout(lay)
         # raise - helps the button widget not to be blocked by something else
         self.raise_()
