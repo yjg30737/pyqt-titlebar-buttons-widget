@@ -25,9 +25,9 @@ class MinMaxCloseButtonsWidget(QWidget):
         self._fixBtn = SvgIconPushButton()
         self._fixBtn.setIcon('ico/tack.svg')
 
-        self._btn_dict = {'min': [self._minimizeBtn], 'max': [self._maximizeBtn], 'close': [self._closeBtn],
-                          'full_screen': [self._fullScreenBtn], 'help': [self._helpBtn], 'fold': [self._foldBtn],
-                          'fix': [self._fixBtn]}
+        self._btn_dict = {'min': self._minimizeBtn, 'max': self._maximizeBtn, 'close': self._closeBtn,
+                          'full_screen': self._fullScreenBtn, 'help': self._helpBtn, 'fold': self._foldBtn,
+                          'fix': self._fixBtn}
 
     def __initUi(self, hint: list):
         lay = QHBoxLayout()
