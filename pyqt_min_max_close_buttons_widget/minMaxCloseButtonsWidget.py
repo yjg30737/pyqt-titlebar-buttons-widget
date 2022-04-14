@@ -1,9 +1,8 @@
-from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QWidget, QHBoxLayout, QPushButton
 
 
 class MinMaxCloseButtonsWidget(QWidget):
-    def __init__(self, hint=Qt.WindowMinMaxButtonsHint | Qt.WindowCloseButtonHint):
+    def __init__(self, hint: list = ['min', 'max', 'close']):
         super().__init__()
         self.__initVal()
         self.__initUi(hint)
@@ -13,22 +12,24 @@ class MinMaxCloseButtonsWidget(QWidget):
         self._minimizeBtn = QPushButton()
         self._maximizeBtn = QPushButton()
 
-    def __initUi(self, hint):
+    def __initUi(self, hint: list):
         lay = QHBoxLayout()
         lay.setContentsMargins(0, 0, 0, 0)
 
-        if hint == Qt.WindowMinMaxButtonsHint | Qt.WindowCloseButtonHint:
+        if 'min' in hint:
             lay.addWidget(self._minimizeBtn)
+        if 'max' in hint:
             lay.addWidget(self._maximizeBtn)
+        if 'close' in hint:
             lay.addWidget(self._closeBtn)
-        elif hint == Qt.WindowMinimizeButtonHint | Qt.WindowCloseButtonHint:
-            lay.addWidget(self._minimizeBtn)
-            lay.addWidget(self._closeBtn)
-        elif hint == Qt.WindowCloseButtonHint:
-            lay.addWidget(self._closeBtn)
-        else:
-            # todo for another type of flags
-            pass
+        if 'full_screen' in hint:
+            print('full_screen')
+        if 'help' in hint:
+            print('help')
+        if 'fold' in hint:
+            print('fold')
+        if 'fix' in hint:
+            print('fix')
 
         self.setLayout(lay)
         # raise - helps the button widget not to be blocked by something else
