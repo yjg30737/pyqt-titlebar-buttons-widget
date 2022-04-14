@@ -86,3 +86,6 @@ class MinMaxCloseButtonsWidget(QWidget):
 
     def getHelpBtn(self):
         return self._helpBtn
+
+    def setButtonIcon(self, hint: str, icon_filename: str):
+        self._btn_dict[hint].setIcon(icon_filename)
