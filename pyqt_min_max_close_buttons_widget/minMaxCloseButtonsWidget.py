@@ -11,25 +11,29 @@ class MinMaxCloseButtonsWidget(QWidget):
         self._closeBtn = QPushButton()
         self._minimizeBtn = QPushButton()
         self._maximizeBtn = QPushButton()
+        self._fullScreenBtn = QPushButton()
+        self._helpBtn = QPushButton()
+        self._foldBtn = QPushButton()
+        self._fixBtn = QPushButton()
 
     def __initUi(self, hint: list):
         lay = QHBoxLayout()
         lay.setContentsMargins(0, 0, 0, 0)
 
+        if 'full_screen' in hint:
+            lay.addWidget(self._fullScreenBtn)
+        if 'help' in hint:
+            lay.addWidget(self._helpBtn)
+        if 'fold' in hint:
+            lay.addWidget(self._foldBtn)
+        if 'fix' in hint:
+            lay.addWidget(self._fixBtn)
         if 'min' in hint:
             lay.addWidget(self._minimizeBtn)
         if 'max' in hint:
             lay.addWidget(self._maximizeBtn)
         if 'close' in hint:
             lay.addWidget(self._closeBtn)
-        if 'full_screen' in hint:
-            print('full_screen')
-        if 'help' in hint:
-            print('help')
-        if 'fold' in hint:
-            print('fold')
-        if 'fix' in hint:
-            print('fix')
 
         self.setLayout(lay)
         # raise - helps the button widget not to be blocked by something else
