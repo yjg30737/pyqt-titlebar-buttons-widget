@@ -1,4 +1,5 @@
 from PyQt5.QtWidgets import QWidget, QHBoxLayout, QPushButton
+from pyqt_svg_icon_pushbutton import SvgIconPushButton
 
 
 class MinMaxCloseButtonsWidget(QWidget):
@@ -11,10 +12,18 @@ class MinMaxCloseButtonsWidget(QWidget):
         self._closeBtn = QPushButton()
         self._minimizeBtn = QPushButton()
         self._maximizeBtn = QPushButton()
-        self._fullScreenBtn = QPushButton()
-        self._helpBtn = QPushButton()
-        self._foldBtn = QPushButton()
-        self._fixBtn = QPushButton()
+
+        self._fullScreenBtn = SvgIconPushButton()
+        self._fullScreenBtn.setIcon('ico/full_screen.svg')
+
+        self._helpBtn = SvgIconPushButton()
+        self._helpBtn.setIcon('ico/help.svg')
+
+        self._foldBtn = SvgIconPushButton()
+        self._foldBtn.setIcon('ico/fold.svg')
+
+        self._fixBtn = SvgIconPushButton()
+        self._fixBtn.setIcon('ico/tack.svg')
 
     def __initUi(self, hint: list):
         lay = QHBoxLayout()
