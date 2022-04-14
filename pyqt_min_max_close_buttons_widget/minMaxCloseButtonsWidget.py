@@ -34,7 +34,12 @@ class MinMaxCloseButtonsWidget(QWidget):
         lay.setContentsMargins(0, 0, 0, 0)
 
         for k in hint:
-            lay.addWidget(self._btn_dict[k])
+            # hint str
+            if k in self._btn_dict:
+                lay.addWidget(self._btn_dict[k])
+            # widget
+            else:
+                lay.addWidget(k)
 
         self.setLayout(lay)
         # raise - helps the button widget not to be blocked by something else
