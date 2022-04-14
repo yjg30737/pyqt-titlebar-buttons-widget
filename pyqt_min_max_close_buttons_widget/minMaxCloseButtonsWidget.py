@@ -48,3 +48,15 @@ class MinMaxCloseButtonsWidget(QWidget):
 
     def getCloseBtn(self):
         return self._closeBtn
+
+    def getFullScreenBtn(self):
+        return self._fullScreenBtn
+
+    def getFixBtn(self):
+        return self._fixBtn
+
+    def getFoldBtn(self):
+        return self._foldBtn
+
+    def getHelpBtn(self):
+        return self._helpBtn
