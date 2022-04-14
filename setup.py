@@ -12,6 +12,7 @@ setup(
     description='PyQt modern min/max/close buttons widget for title bar or menu bar',
     url='https://github.com/yjg30737/pyqt-min-max-close-buttons-widget.git',
     install_requires=[
-        'PyQt5>=5.8'
+        'PyQt5>=5.8',
+        'pyqt-svg-icon-text-widget @ git+https://git@github.com/yjg30737/pyqt-svg-icon-text-widget.git@main'
     ]
 )
