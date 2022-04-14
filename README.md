@@ -12,7 +12,7 @@ PyQt modern min/max/close buttons widget for title bar or menu bar
 * <a href="https://github.com/yjg30737/pyqt-mac-min-max-close-buttons-widget.git">pyqt-mac-min-max-close-buttons-widget</a>
 
 ## Class, Method Overview
-* ```MacMinMaxCloseButtonsWidget(hint=Qt.WindowMinMaxButtonsHint | Qt.WindowCloseButtonHint)``` - Constructor.
+* ```MacMinMaxCloseButtonsWidget(hint=['min, 'max', 'close'])``` - Constructor.
 * ```getMinimizedBtn()```, ```getMaximizedBtn()```, ```getCloseBtn()```. I belive these three methods are quite self-explanatory.
 
 ## Note
