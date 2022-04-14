@@ -40,6 +40,27 @@ class MinMaxCloseButtonsWidget(QWidget):
         # raise - helps the button widget not to be blocked by something else
         self.raise_()
 
+    def setMinimizedBtn(self, btn):
+        self._minimizeBtn = btn
+
+    def setMaximizedBtn(self, btn):
+        self._maximizeBtn = btn
+
+    def setCloseBtn(self, btn):
+        self._closeBtn = btn
+
+    def setFullScreenBtn(self,  btn):
+        self._fullScreenBtn = btn
+
+    def setFixBtn(self, btn):
+        self._fixBtn = btn
+
+    def setFoldBtn(self, btn):
+        self._foldBtn = btn
+
+    def setHelpBtn(self, btn):
+        self._helpBtn = btn
+
     def getMinimizedBtn(self):
         return self._minimizeBtn
 
