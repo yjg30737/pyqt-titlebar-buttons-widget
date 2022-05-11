@@ -21,7 +21,7 @@ PyQt buttons (e.g. min/max/close) widget for title bar or menu bar
 ## Note
 This package was actually made for those two packages i mentioned. Reducing redundancy.
 
-<b>(2022/5/11)</b>
+<b>=== 2022/5/11 ===</b>
 
 I'm working on other features such as help/tack buttons.
 
