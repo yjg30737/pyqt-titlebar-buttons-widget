@@ -1,11 +1,14 @@
-# pyqt-min-max-close-buttons-widget
-PyQt modern min/max/close buttons widget for title bar or menu bar
+# pyqt-titlebar-buttons-widget
+PyQt buttons (e.g. min/max/close) widget for title bar or menu bar
 
 ## Requirements
 * PyQt5 >= 5.8
 
 ## Setup
-```pip3 install git+https://github.com/yjg30737/pyqt-min-max-close-buttons-widget.git --upgrade```
+```pip3 install git+https://github.com/yjg30737/pyqt-titlebar-buttons-widget.git --upgrade```
+
+## Included Packages
+* <a href="https://github.com/yjg30737/pyqt-svg-icon-pushbutton.git">pyqt-svg-icon-pushbutton</a>
 
 ## Package Inherited by This
 * <a href="https://github.com/yjg30737/pyqt-windows-min-max-close-buttons-widget.git">pyqt-windows-min-max-close-buttons-widget</a>
@@ -16,4 +19,4 @@ PyQt modern min/max/close buttons widget for title bar or menu bar
 * ```getMinimizedBtn()```, ```getMaximizedBtn()```, ```getCloseBtn()```. I belive these three methods are quite self-explanatory.
 
 ## Note
-This package was actually made for those two package i mentioned. Reducing redundancy.
+This package was actually made for those two packages i mentioned. Reducing redundancy.
