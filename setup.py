@@ -13,6 +13,6 @@ setup(
     url='https://github.com/yjg30737/pyqt-titlebar-buttons-widget.git',
     install_requires=[
         'PyQt5>=5.8',
-        'pyqt-svg-icon-text-widget>=0.0.1'
+        'pyqt-svg-icon-pushbutton>=0.0.1'
     ]
 )
