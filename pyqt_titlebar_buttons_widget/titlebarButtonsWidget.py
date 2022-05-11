@@ -2,7 +2,7 @@ from PyQt5.QtWidgets import QWidget, QHBoxLayout, QPushButton
 from pyqt_svg_icon_pushbutton import SvgIconPushButton
 
 
-class MinMaxCloseButtonsWidget(QWidget):
+class TitlebarButtonsWidget(QWidget):
     def __init__(self, hint: list = ['min', 'max', 'close']):
         super().__init__()
         self.__initVal()
