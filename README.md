@@ -5,7 +5,7 @@ PyQt buttons (e.g. min/max/close) widget for title bar or menu bar
 * PyQt5 >= 5.8
 
 ## Setup
-```pip3 install git+https://github.com/yjg30737/pyqt-titlebar-buttons-widget.git --upgrade```
+`python -m pip install pyqt-titlebar-buttons-widget`
 
 ## Included Packages
 * <a href="https://github.com/yjg30737/pyqt-svg-icon-pushbutton.git">pyqt-svg-icon-pushbutton</a>
