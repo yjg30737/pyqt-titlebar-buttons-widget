@@ -1,5 +1,5 @@
 # pyqt-titlebar-buttons-widget
-PyQt buttons (e.g. min/max/close) widget for title bar or menu bar
+PyQt buttons (e.g. min/max/close) widget for title bar or menu bar 
 
 ## Requirements
 * PyQt5 >= 5.8
