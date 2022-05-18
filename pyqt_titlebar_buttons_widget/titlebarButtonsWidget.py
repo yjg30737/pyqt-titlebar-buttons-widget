@@ -1,5 +1,5 @@
 from PyQt5.QtWidgets import QWidget, QHBoxLayout, QPushButton
-from pyqt_svg_icon_pushbutton import SvgIconPushButton
+from pyqt_svg_button import SvgButton
 
 
 class TitlebarButtonsWidget(QWidget):
@@ -13,16 +13,16 @@ class TitlebarButtonsWidget(QWidget):
         self._minimizeBtn = QPushButton()
         self._maximizeBtn = QPushButton()
 
-        self._fullScreenBtn = SvgIconPushButton()
+        self._fullScreenBtn = SvgButton()
         self._fullScreenBtn.setIcon('ico/full_screen.svg')
 
-        self._helpBtn = SvgIconPushButton()
+        self._helpBtn = SvgButton()
         self._helpBtn.setIcon('ico/help.svg')
 
-        self._foldBtn = SvgIconPushButton()
+        self._foldBtn = SvgButton()
         self._foldBtn.setIcon('ico/fold.svg')
 
-        self._fixBtn = SvgIconPushButton()
+        self._fixBtn = SvgButton()
         self._fixBtn.setIcon('ico/tack.svg')
 
         self._btn_dict = {'min': self._minimizeBtn, 'max': self._maximizeBtn, 'close': self._closeBtn,
