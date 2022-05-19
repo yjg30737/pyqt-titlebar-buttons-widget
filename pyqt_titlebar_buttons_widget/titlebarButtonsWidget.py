@@ -1,17 +1,17 @@
-from PyQt5.QtWidgets import QWidget, QHBoxLayout, QPushButton
+from PyQt5.QtWidgets import QWidget, QHBoxLayout
 from pyqt_svg_button import SvgButton
 
 
 class TitlebarButtonsWidget(QWidget):
-    def __init__(self, hint: list = ['min', 'max', 'close']):
+    def __init__(self, base_widget=None, hint: list = ['min', 'max', 'close']):
         super().__init__()
-        self.__initVal()
-        self.__initUi(hint)
+        self.__initVal(base_widget, hint)
+        self.__initUi()
 
-    def __initVal(self):
-        self._closeBtn = QPushButton()
-        self._minimizeBtn = QPushButton()
-        self._maximizeBtn = QPushButton()
+    def __initVal(self, base_widget, hint):
+        self._closeBtn = SvgButton(base_widget)
+        self._minimizeBtn = SvgButton(base_widget)
+        self._maximizeBtn = SvgButton(base_widget)
 
         self._fullScreenBtn = SvgButton()
         self._fullScreenBtn.setIcon('ico/full_screen.svg')
@@ -29,11 +29,15 @@ class TitlebarButtonsWidget(QWidget):
                           'full_screen': self._fullScreenBtn, 'help': self._helpBtn, 'fold': self._foldBtn,
                           'fix': self._fixBtn}
 
-    def __initUi(self, hint: list):
+        self._base_widget = base_widget
+        self._hint = hint
+
+    def __initUi(self):
         lay = QHBoxLayout()
         lay.setContentsMargins(0, 0, 0, 0)
+        lay.setSpacing(0)
 
-        for k in hint:
+        for k in self._hint:
             # hint str
             if k in self._btn_dict:
                 lay.addWidget(self._btn_dict[k])
