@@ -1,3 +1,4 @@
+from PyQt5.QtGui import QPalette
 from PyQt5.QtWidgets import QWidget, QHBoxLayout
 from pyqt_svg_button import SvgButton
 
@@ -13,16 +14,16 @@ class TitlebarButtonsWidget(QWidget):
         self._minimizeBtn = SvgButton(base_widget)
         self._maximizeBtn = SvgButton(base_widget)
 
-        self._fullScreenBtn = SvgButton()
+        self._fullScreenBtn = SvgButton(base_widget)
         self._fullScreenBtn.setIcon('ico/full_screen.svg')
 
-        self._helpBtn = SvgButton()
+        self._helpBtn = SvgButton(base_widget)
         self._helpBtn.setIcon('ico/help.svg')
 
-        self._foldBtn = SvgButton()
+        self._foldBtn = SvgButton(base_widget)
         self._foldBtn.setIcon('ico/fold.svg')
 
-        self._fixBtn = SvgButton()
+        self._fixBtn = SvgButton(base_widget)
         self._fixBtn.setIcon('ico/tack.svg')
 
         self._btn_dict = {'min': self._minimizeBtn, 'max': self._maximizeBtn, 'close': self._closeBtn,
@@ -30,6 +31,8 @@ class TitlebarButtonsWidget(QWidget):
                           'fix': self._fixBtn}
 
         self._base_widget = base_widget
+        self.__window = self._base_widget.window()
+        self.__window.installEventFilter(self)
         self._hint = hint
 
     def __initUi(self):
@@ -46,8 +49,22 @@ class TitlebarButtonsWidget(QWidget):
                 lay.addWidget(k)
 
         self.setLayout(lay)
+
+        self._styleInit()
+
         # raise - helps the button widget not to be blocked by something else
         self.raise_()
+
+    def _styleInit(self):
+        # fill the button's background with color
+        background_color = self._base_widget.palette().color(QPalette.Base).name()
+        for btn in self._btn_dict.values():
+            btn.setBackground(background_color)
+
+    def event(self, e):
+        if e.type() == 100:
+            self._styleInit()
+        return super().event(e)
 
     def setMinimizedBtn(self, btn):
         self._minimizeBtn = btn
