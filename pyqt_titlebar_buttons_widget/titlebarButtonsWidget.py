@@ -1,3 +1,4 @@
+from PyQt5.QtCore import QSize
 from PyQt5.QtGui import QPalette
 from PyQt5.QtWidgets import QWidget, QHBoxLayout
 from pyqt_svg_button import SvgButton
