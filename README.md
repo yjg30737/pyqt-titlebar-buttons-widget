@@ -17,6 +17,7 @@ PyQt buttons (e.g. min/max/close) widget for title bar or menu bar
 ## Class, Methods Overview
 * `TitlebarButtonsWidget(base_widget=None, hint=['min, 'max', 'close'])` - Constructor.
 * `getMinimizedBtn()`, `getMaximizedBtn()`, `getCloseBtn()`. I belive these three methods are quite self-explanatory.
+* `setButtonSize(w, h)`. Set the overall width/height, text/icon size of button.
 
 ## Note
 This package was actually made for those two packages i mentioned. Reducing redundancy.
