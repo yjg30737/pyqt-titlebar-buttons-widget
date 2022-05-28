@@ -116,7 +116,7 @@ class TitlebarButtonsWidget(QWidget):
         for k, v in self._btn_dict.items():
             if v.text():
                 f = v.font()
-                f.setPointSize(w // 1.75)
+                f.setPointSize(w // 2)
                 v.setFont(f)
             elif v.icon():
                 v.setIconSize(QSize(w, h))
