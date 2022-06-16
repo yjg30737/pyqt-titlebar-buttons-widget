@@ -1,6 +1,6 @@
 from PyQt5.QtCore import QSize
 from PyQt5.QtGui import QPalette
-from PyQt5.QtWidgets import QWidget, QHBoxLayout
+from PyQt5.QtWidgets import QWidget, QHBoxLayout, QMainWindow
 from pyqt_svg_button import SvgButton
 
 
@@ -58,7 +58,11 @@ class TitlebarButtonsWidget(QWidget):
 
     def _styleInit(self):
         # fill the button's background with color
-        background_color = self._base_widget.palette().color(QPalette.Base).name()
+        if isinstance(self._base_widget, QMainWindow):
+            palette = self._base_widget.menuBar().palette()
+        else:
+            palette = self._base_widget.palette()
+        background_color = palette.color(QPalette.Base).name()
         for btn in self._btn_dict.values():
             btn.setBackground(background_color)
 
