@@ -27,5 +27,3 @@ This package was actually made for those two packages i mentioned. Reducing redu
 I'm working on other features such as help/tack buttons.
 
 I could be working on adding another widgets(e.g. search bar) beside the buttons. So far i'm only working on the button because that seems to be the most generic feature.
-
-I'm also working on feature that make user able to customize the buttons.
