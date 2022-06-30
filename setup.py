@@ -15,7 +15,7 @@ setup(
     license='MIT',
     packages=find_packages(),
     package_data={'pyqt_titlebar_buttons_widget.ico': ['full_screen.svg', 'help.svg', 'tack.svg',
-                                                            'fold.svg', 'unfold.svg']},
+                                                            'fold.svg', 'unfold.svg', 'search.svg']},
     description='PyQt buttons (e.g. min/max/close) widget for title bar or menu bar',
     url='https://github.com/yjg30737/pyqt-titlebar-buttons-widget.git',
     long_description_content_type='text/markdown',
