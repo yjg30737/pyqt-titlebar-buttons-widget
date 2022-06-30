@@ -27,6 +27,9 @@ class TitlebarButtonsWidget(QWidget):
         self._fixBtn = SvgButton(base_widget)
         self._fixBtn.setIcon('ico/tack.svg')
 
+        self._searchBtn = SvgButton(base_widget)
+        self._searchBtn.setIcon('ico/search.svg')
+
         self._btn_dict = {'min': self._minimizeBtn, 'max': self._maximizeBtn, 'close': self._closeBtn,
                           'full_screen': self._fullScreenBtn, 'help': self._helpBtn, 'fold': self._foldBtn,
                           'fix': self._fixBtn}
